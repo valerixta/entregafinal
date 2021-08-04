@@ -1,0 +1,33 @@
+@import "./mixins";
+
+
+.container_releases {
+	display: flex; 
+	flex-wrap: wrap; 
+	padding: 7px;
+	justify-content: center; 
+	@include mobile {
+		flex-direction:column;
+		flex-wrap:nowrap;
+	}
+
+	.subcontainer_release { 
+		border: none; 
+		color: white; 
+		opacity: 1; 
+		transition: 0.3s; 
+		&:hover {
+			opacity: 0.8; 
+		}
+		.release {
+			margin: 5px;
+			display: block; 
+			.img_release{
+				@include mobile {
+					display: block;	
+					width: 100%;
+				}
+			}
+		}
+	}
+}
